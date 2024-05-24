@@ -34,41 +34,32 @@ patient_colors = [0.1, 0.9, 0.2, 0.8, 0.3, 0.7, 0.4, 0.6, 0.5, 0.5, 0.15, 0.95] 
 
 
 folder_name = "Test01"
-# (TODO: New to test?)
-folder_name = "Experiments/Test1"
-folder_name = "Experiments/Test2"
-# (Todo: testing training as well, maybe less runs etc., for other plots testing? ...)
-folder_name = "Experiments/Test3" # same without action effects? ... (?)
-model_folder_name = "Experiments/Test2"
-# (Todo: with shape adaptation? (also less agents?)
-folder_name = "Experiments/Test4"
 
-last=100
+last = 100
 cut = False
 
-#model_folder_name = 'Experiments/ResAblationTimeHorizon-test_old_m04v11-adashape-t0-0.2-t31-0'
-#model_folder_name = 'C:/Users/Johanna/Documents/CAPRI - 2/Code/CAPRI-main/CAPRI-master/Experiments/ResAblationTimeHorizon-test_old_m04v11-adashape-t0-0.2-t31-0'
+model_folder_name = 'Experiments/...'
 
 
-a_shapes = [0.2,0.8] # [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+a_shapes = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
 
 nr_epoch = 30
 n_sequence = 100
 epochs = range(0, nr_epoch)
 
-simulations = [0]# range(0,20)
+simulations = range(0,20)
 nr_sim = len(simulations)
 
-saved_model = True # False
+saved_model = False # True
 
 l_r = 0.00001
 m_r = 0.3
-nr_update_steps = 5#0 #5
+nr_update_steps = 0 #5
 
 
 def tst_run(directory_name, setting_name, event_system, interaction_env,
              a_shape_basis, simulation_num, epoch_num, run_num, time_horizon,
-             a_shape, file_name_addition='', learning_rate = 0.0001): #(??)
+             a_shape, file_name_addition='', learning_rate = 0.0001):
     """
     Performs one test run and logs the results
     :param directory_name: name of target folder for log files

@@ -3,33 +3,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-# with and without adaptation, with action effects(?)
-folder_nonad = "Experiments/ResAblationTimeHorizon-test_old_0_4v.1.1-3-adashape-t0-0.4-t34-0-1"
-folder_adapt = "Experiments/ResAblationTimeHorizon-test_old_0_4v.1.1-3-adashape-t0-0.4-t34-1"
-v = "t0-3401-341-t1-comp-adapt-h0.4_c0.8"
-#v = "t0-3401-341-t1-comp-adapt-h0.5_c1.0"
-
-# # with and without action effects, without shape adaptation
-# folder_nonad = "Experiments/ResAblationTimeHorizon-test_old_0_4v.1.1-3-adashape-t0-0.4-t35-c-0"
-# folder_adapt = "Experiments/ResAblationTimeHorizon-test_old_0_4v.1.1-3-adashape-t0-0.4-t34-0-1"
-# v = "t0-3401-35c0-t1-comp-acteff-noadapt-h0.4_c0.8"
-# #v = "t0-3401-35c0-t1-comp-acteff-noadapt-h0.5_c1.0"
-
-# # # with and without action effects, with shape adaptation
-folder_nonad = "Experiments/ResAblationTimeHorizon-test_old_0_4v.1.1-3-adashape-t0-0.4-t35-c-1"
-folder_adapt = "Experiments/ResAblationTimeHorizon-test_old_0_4v.1.1-3-adashape-t0-0.4-t34-1"
-v = "t0-3401-351-t1-comp-acteff-wadapt-h0.4_c0.8"
-# #v = "t0-3401-351-t1-comp-acteff-wadapt-h0.5_c1.0"
-
-# # # with and without action effects, with shape adaptation
-folder_nonad = "Experiments/ResAblationTimeHorizon-test_old_0_4v.1.1-3-adashape-t0-0.4-t35-c-2"
-folder_adapt = "Experiments/ResAblationTimeHorizon-test_old_0_4v.1.1-3-adashape-t0-0.4-t34-1"
-v = "t0-341-35c2-t1-comp-acteff-wadapt-h0.4_c0.8"
-
-folder_nonad =  "Experiments/Test3" # same without action effects ...
+# Paths to result files:
+folder_nonad =  "Experiments/Test3" # without action effects ...
 folder_adapt = "Experiments/Test2" # with action effects ...
-v = "test2-test3-comp-acteff-withoutadapt-h0.2_c0.8"
+v = "test2-test3-comp-acteff-noadapt-h0.2_c0.8"
 
 folder_names = [folder_nonad, folder_adapt]
 
@@ -179,7 +156,6 @@ if num_sims != n_sims_1:
 else:
     plt.savefig(folder_names[0] + "/" + v + "_gaze_tau2_" + label_add + str(num_sims) + "sims_n.png",
                 bbox_inches='tight')
-
 
 # Use this to just visualize the plot
 plt.show()
